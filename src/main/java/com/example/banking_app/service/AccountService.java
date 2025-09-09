@@ -3,6 +3,8 @@ package com.example.banking_app.service;
 import com.example.banking_app.dto.AccountDto;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public interface AccountService {
 
@@ -11,5 +13,11 @@ public interface AccountService {
     AccountDto getAccountById(Long id);
 
     AccountDto deposit(Long id, double amount);
+
+    AccountDto withdraw(Long id, double amount);
+
+    List<AccountDto> getAllAccounts();
+
+    void deleteAccount(Long id);
 
 }
